@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  ul li {
+    display: inline;
+  }
+  
+  ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  ul li a:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
