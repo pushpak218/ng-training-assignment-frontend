@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Task } from '../models/task.model'; // Adjust the import path if necessary
+import { Task } from '../models/task.model'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:5000/api'; // Update this with your backend API URL
+  private apiUrl = 'http://localhost:5000/api'; 
   private urlGetAll=`${this.apiUrl}/tasks`;
   private urlPost=`${this.apiUrl}/task`;
   private httpOptions = {
@@ -56,7 +56,7 @@ export class TaskService {
 
   // Delete a task
   deleteTask(taskId: string): Observable<void> {
-    const url = `${this.apiUrl}/task/${taskId}`; // Ensure 'tasks' is used and not 'task'
+    const url = `${this.apiUrl}/task/${taskId}`; 
     return this.http.delete<void>(url, this.httpOptions)
       .pipe(
         catchError(this.handleError)
